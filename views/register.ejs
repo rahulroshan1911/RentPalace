@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SignUp Page</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <% include partials/nav.ejs %>
+      <div class="row">
+        <div class="col-md-12 text-center last_ele1">
+          <h2><strong>Welcome to RentPalace</strong></h2>
+        </div>
+        <form id="login-form" method="post" action="/register">
+          <div class="form-group">
+            <input type="text" class="form-control input" id="Name" placeholder="Enter your Name" value="<%= qs1.name %>" name="name">
+          </div>
+          <div class="form-group">
+            <input type="tel" class="form-control input" id="Number" placeholder="Enter your Phone Number" value="<%= qs1.number %>" name="phone" maxlength="10">
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control input" id="Email" placeholder="Enter your Email ID" value="<%= qs1.email %>" name="email">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control input" id="Password" placeholder="Enter your Password" value="<%= qs1.password %>" name="password">
+          </div>
+          <button type="submit" class="btn btn-primary butt ele1">Register</button>
+        </form>
+      </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <% include partials/nav.ejs %>
+      <div class="row">
+        <div class="col-md-12 text-center last_ele1">
+          <h2><strong>Sign In</strong></h2>
+        </div>
+        <form id="login-form" method="post" action="/login">
+          <div class="form-group">
+            <input type="email" class="form-control input" id="Email" placeholder="Enter your Email ID" value="<%= qs.email %>" name="email">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control input" id="Password" placeholder="Enter your Password" value="<%= qs.password %>" name="password">
+          </div>
+          <button type="submit" class="btn btn-primary butt ele1">Login</button>
+        </form>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h4>New User ? <a href="register">Sign Up</a></h4>
+          </div>
+        </div>
+      </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <% include partials/nav.ejs %>
+    <div class="row">
+      <div class="col-md-12 text-center first_ele last_ele1">
+        <h2><strong>Sign In</strong></h2>
+      </div>
+      <form>
+        <div class="form-group">
+          <input type="email" class="form-control" id="Email1" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" id="Password" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

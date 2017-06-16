@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Post Your Add</title>
+  </head>
+  <body>
+    <div class="container">
+      <% include partials/nav.ejs %>
+      <div class="row">
+        <div class="col-md-12">
+          <h2><strong><u>Address Information</u></strong></h2>
+        </div>
+      </div>
+      <form id="login-form hform" action="/information" method="post">
+        <div class="row">
+          <div class="col-md-12">
+            <input type="text" class="form-control ibut hname" placeholder="House Number or Name" value="<%= qs2.hno %>" name="hno" required="" >
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <input type="text" class="form-control ibut" placeholder="Colony or Street Name" value="<%= qs2.cname %>" name="cname" required="">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <input type="text" class="form-control ibut" placeholder="Locality Name" value="<%= qs2.locality %>" name="locality" required="">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <input type="text" class="form-control ibut" placeholder="City or Town Name" value="<%= qs2.city %>" name="city" required="">
+          </div>
+          <div class="col-md-4">
+            <input type="tel" class="form-control but" placeholder="Enter Your Pincode" value="<%= qs2.pin %>" name="pin" required="">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <input type="text" class="form-control ibut" placeholder="State Name" value="<%= qs2.state %>" name="state" required="">
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-md-12">
+            <h2><strong><u>Property Information</u></strong></h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <select class="ibut form-control hname" name="bedroom" value="<%= qs2.bedroom %>" required="">
+              <option selected="" disabled="">Number of Bedrooms</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">&ge;4</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <select class="ibut form-control" name="kitchen" value="<%= qs2.kitchen %>" required="">
+              <option selected="" disabled="">Number of Kitchen</option>
+              <option value="1">1</option>
+              <option value="2">&ge;2</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <select class="ibut form-control" name="bathroom" value="<%= qs2.bathroom %>" required="">
+              <option selected="" disabled="">Number of Bathroom</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">&ge;3</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <select class="ibut form-control" name="garage" value="<%= qs2.garage %>" required="">
+              <option selected="" disabled="">Garage Present</option>
+              <option value="yes">yes</option>
+              <option value="no">no</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <select class="ibut form-control" name="floor" value="<%= qs2.floor %>" required="">
+              <option selected="" disabled="">Floor Number of House</option>
+              <option value="0">Ground</option>
+              <option value="1">First Floor</option>
+              <option value="2">Second Floor</option>
+              <option value="3">Third Floor</option>
+              <option value="4">Fourth Floor</option>
+              <option value="5">Fifth Floor</option>
+              <option value="6">Higher than Fifth Floor</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <input type="tel" class="form-control ibut" placeholder="Monthly Rent" value="<%= qs2.rent %>" name="rent" required="">
+          </div>
+          <div class="col-md-4">
+            <input type="tel" class="form-control but" placeholder="Security Deposit" value="<%= qs2.deposit %>" name="deposit" required="">
+          </div>
+          <div class="col-md-4">
+            <select class="but form-control" name="elecbill" value="<%= qs2.elecbill %>" required="">
+              <option selected="" disabled="">Electricity Bill included ?</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-md-12">
+            <h2><strong><u>Extra information</u></strong></h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <textarea name="title" rows="4" cols="30" class="hname ta form-control" placeholder="Add a nice title to your Add" required=""></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <textarea name="desc" rows="8" cols="50" class="t form-control" placeholder="Add a nice Description to your Add" required=""></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary butt pbut" >Post the Add</button>
+      </form>
+    </div>
+  </body>
+</html>
